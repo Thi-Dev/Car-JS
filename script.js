@@ -45,17 +45,23 @@ for (let i = 0; i < names.length; i++){                         // chek every na
         tableNames.push(names[i]);                              // make the name inside the blank table
     }
 }
+
 console.log("Names with more than 5 character : ", tableNames); // display names more than 5 char
 
 // Names with a
 
 let tableWithA = [];                                            // Blank table
+
 for (let i = 0; i < names.length ; i++){                        // chek every name in the table
     if(names[i].toLowerCase().includes("a")){                   // make lowerCase every names and check if there is "a"
-        tableNames.push(names[i]);                              // put in the name with "a" in a blank table
+        if (!tableWithA.includes(names[i])) {                   // check that the name is not in the List
+            tableWithA.push(names[i]);                          // add "a " in the table
+        }
+                                        
     }
 }
-console.log("Names with character a ", tableNames);             // display Names with the character a
+
+console.log("Names with character a ", tableWithA);             // display Names with the character a
 
 // Replace char "O" by "i"
 
