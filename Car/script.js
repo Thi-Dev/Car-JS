@@ -38,21 +38,21 @@ titleEvent.addEventListener("mouseout", function(){
 
 // 2 - Choose the manufacture
 
-        // Sélectionner tous les boutons ayant la classe "choose-button"
+        // Select all buttons with the “choose-button” class
         let chooseButtons = document.querySelectorAll(".choose-button");
 
-        // Parcourir chaque bouton avec une boucle `for`
+        // Browse each button with a `for` loop
         for (let i = 0; i < chooseButtons.length; i++) {
             chooseButtons[i].onclick = function() {
         
-            // Changer la couleur du bouton
+            // change the button color
              chooseButtons[i].style.backgroundColor = "yellow";
         
-            // Trouver le constructeur associé (le texte du fabricant)
-            let carDiv = chooseButtons[i].parentElement;                        // Parent div contenant la voiture
-            let manufacturer = carDiv.querySelector(".manufacturer");           // Trouver le constructeur
+            // Find the associated manufacturer
+            let carDiv = chooseButtons[i].parentElement;                        // Div parent for the car
+            let manufacturer = carDiv.querySelector(".manufacturer");           // finding the manufacturer
         
-            // Vérification si le texte a déjà été modifié
+            // Check if the text has already been modified
             if (!manufacturer.innerHTML.includes("is taken")) {
                     manufacturer.innerHTML = `${manufacturer.innerText} is taken`;
                     manufacturer.style.backgroundColor = "#FF6600";
