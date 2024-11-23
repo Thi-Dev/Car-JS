@@ -15,12 +15,13 @@ body {
 }
 
 /* Glassmorphism container */
+
 .car-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    margin: 300px;
-    padding: 20px;
+    /* margin: 300px; */
+    margin-left: 100px;
     margin-top: 40px;
 }
 
