@@ -171,43 +171,72 @@ button.choose-button {
     animation: highlightButton 1s infinite;
 }
 
+/* Responsives */
+/* Adjustments for small screens (phones) */
 @media only screen and (max-width: 600px) {
     body {
         font-size: 14px;
+        padding: 10px;
     }
 
     .car-container {
-        margin: 10px;
-        grid-template-columns: 1fr; /* Une seule colonne */
+        grid-template-columns: 1fr; /* One column layout */
+        margin: 0;
+        padding: 10px;
     }
 
     .car {
         padding: 15px;
-        margin: 5px;
+        margin: 10px 0;
+        border-radius: 10px;
     }
 
-    #title {
+    h2.manufacturer {
         font-size: 20px;
         text-align: center;
     }
+
+    #title {
+        font-size: 24px;
+    }
+
+    button.choose-button {
+        width: 100%; /* Full-width buttons */
+    }
 }
 
-@media only screen and (min-width: 801px) and (max-width: 1024px) {
+/* Adjustments for tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
     body {
         font-size: 16px;
+        padding: 15px;
     }
 
     .car-container {
-        grid-template-columns: 1fr 1fr; /* Deux colonnes */
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+        gap: 15px;
     }
 
     .car {
         padding: 20px;
-        margin: 10px;
+        margin: 15px 0;
+    }
+
+    h2.manufacturer {
+        font-size: 22px;
     }
 
     #title {
         font-size: 28px;
     }
+
+    button.choose-button {
+        width: 100%; /* Full-width buttons */
+    }
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
