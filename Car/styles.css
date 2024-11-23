@@ -171,55 +171,43 @@ button.choose-button {
     animation: highlightButton 1s infinite;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) { /* Tablettes et petits écrans */
+@media only screen and (max-width: 600px) {
     body {
-        padding: 0 5px;
-    }
-
-    #title {
-        font-size: 28px;
-    }
-
-    .description {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .car-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 15px;
+        margin: 10px;
+        grid-template-columns: 1fr; /* Une seule colonne */
     }
 
     .car {
         padding: 15px;
+        margin: 5px;
     }
 
-    button.choose-button {
-        font-size: 14px;
-        padding: 8px 15px;
+    #title {
+        font-size: 20px;
+        text-align: center;
     }
 }
 
-@media (max-width: 480px) { /* Téléphones */
-    #title {
-        font-size: 24px;
-    }
-
-    .description {
-        font-size: 14px;
+@media only screen and (min-width: 801px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
     }
 
     .car-container {
-        grid-template-columns: 1fr; /* Une colonne */
-        gap: 10px;
+        grid-template-columns: 1fr 1fr; /* Deux colonnes */
+        gap: 20px;
     }
 
     .car {
-        padding: 10px;
+        padding: 20px;
+        margin: 10px;
     }
 
-    button.choose-button {
-        font-size: 12px;
-        padding: 6px 10px;
+    #title {
+        font-size: 28px;
     }
 }
